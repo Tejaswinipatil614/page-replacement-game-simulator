@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎮 Page Replacement Simulator</h1>
+
+    <input id="pages" placeholder="Pages (1 2 3 4)">
+    <input id="frames" type="number" placeholder="Frames">
+
+    <br>
+
+    <select id="algo">
+        <option value="FIFO">FIFO</option>
+        <option value="LRU">LRU</option>
+    </select>
+
+    <input id="guess" placeholder="Your Guess">
+
+    <br>
+
+    <button onclick="runSimulation()">🚀 Start Simulation</button>
+
+    <div id="score">Score: 0</div>
+
+    <div id="output"></div>
+
+    <canvas id="chart"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* ================= GLOBAL ================= */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+/* ================= WELCOME PAGE ================= */
+
+body.welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Animated background */
+.overlay {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
+    background-size: 50px 50px;
+    animation: moveBg 10s linear infinite;
+}
+
+@keyframes moveBg {
+    from { transform: translate(0,0); }
+    to { transform: translate(-50px, -50px); }
+}
+
+/* Welcome card */
+.welcome-card {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1.5s ease;
+}
+
+.welcome-card h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome-card p {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.start {
+    background: #00c9a7;
+}
+
+.about {
+    background: #ff7eb3;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* ================= SIMULATOR + ABOUT ================= */
+
+.container {
+    width: 70%;
+    margin: 60px auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    animation: fadeIn 1s ease;
+}
+
+/* Headings */
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input, select {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    background: #00c9a7;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Frames */
+.frame-box {
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    animation: pop 0.4s ease;
+}
+
+/* Output box */
+#output div {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+}
+
+/* Score */
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Chart */
+canvas {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* List styling (About page) */
+ul {
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
